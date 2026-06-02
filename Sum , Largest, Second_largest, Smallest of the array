@@ -1,0 +1,50 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        int [] array = {1,2,3,4,5};
+        int count = 0;
+        for (int i =0; i < array.length; i++){
+            count = count + array[i];
+        }
+        System.out.println(" Total count:" + count);
+        int largest = array[0];
+        int second_largest = array[0];
+        for (int i = 0; i < array.length; i++){
+            if (array[i] > largest){
+                second_largest = largest;
+                largest = array[i];
+            }
+            else if (array[i] < largest && array[i] > second_largest)
+            {
+                second_largest = array[i];
+            }
+        }
+        System.out.println("second largest element :" + second_largest);
+        System.out.println("largest element :" + largest);
+    
+        int smallest = array[0];
+        for (int i = 0; i < array.length; i++){
+            if (array[i] < smallest){
+                smallest = array[i];
+            }
+        }
+        System.out.println("Smallest element :" + smallest);
+        
+        int [][] arr = {{1,2},{3,4}};
+        int total = 0;
+        for (int i = 0; i < arr.length; i++){
+            for (int j = 0; j < arr.length; j++){
+                total = total + arr[i][j];
+            }
+        }
+        System.out.println(total);
+        
+        for (int i = 0; i < arr.length; i++){
+            for (int j = 0; j <arr.length ; j++){
+                System.out.print(arr[j][i]);
+            }
+        }
+    }
+}
