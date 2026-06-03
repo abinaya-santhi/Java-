@@ -1,0 +1,11 @@
+public class Main
+{
+	public static void main(String[] args) {
+		String str = "Java Programming";
+		System.out.println("This is a String Output:" + str);
+		System.out.println("The Length of the String is " + str.length());
+		System.out.println("The UPPER CASE of the String is " + str.toUpperCase());
+		System.out.println("The lower case of the String is " + str.toLowerCase());
+		System.out.println("The Example for Substring of the String  are \"" + str.substring(5)+"\" and \""+ str.substring(1,5)+ "\"");
+	}
+}
