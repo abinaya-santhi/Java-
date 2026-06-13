@@ -1,0 +1,16 @@
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        String[] arr = input.split(" ");
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        for (String s : arr){
+            list.add(Integer.parseInt(s));
+        }
+        Collections.sort(list);
+        int n = list.size();
+        System.out.print(list.get(n-1));
+    }
+}
