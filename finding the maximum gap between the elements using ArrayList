@@ -1,0 +1,26 @@
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        String[] parts = input.split(" ");
+        ArrayList<Integer> nums = new ArrayList<>();
+        
+        for (String s : parts){
+            nums.add(Integer.parseInt(s));
+        }
+        Collections.sort(nums);
+        
+        int max_gap = 0;
+        
+        for (int i = 1 ; i < nums.size() ; i++){
+            max_gap = Math.max(max_gap , nums.get(i) - nums.get(i-1));
+        }
+        
+        System.out.println(max_gap);
+        
+        
+        
+        
+    }
+}
