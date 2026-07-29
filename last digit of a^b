@@ -1,0 +1,23 @@
+class Solution {
+    public int getLastDigit(String a, String b) {
+        // code here
+        if ( b.equals("0")){
+            return 1;
+        }
+        if (a.equals("1")){
+            return 1;
+        }
+        int exponent = (modulo(b,4) == 0 ? 4 : modulo(b,4));
+        int result = (int)Math.pow(a.charAt(a.length() -1) - '0' , exponent);
+        return result % 10;
+    }
+    private static int modulo(String b, int mod){
+        int rem = 0;
+        for (int i = 0 ; i < b.length() ;i++){
+            rem = (rem * 10 + b.charAt(i) - '0' ) % mod;
+            
+        }  
+        return rem;
+        
+    }
+}
