@@ -1,0 +1,11 @@
+class Solution {
+    static boolean isEven(int n) {
+        // code here
+        boolean boo = false;
+        if ( n % 2 == 0){
+            boo = true;
+        
+        }
+        return boo;
+    }
+}
