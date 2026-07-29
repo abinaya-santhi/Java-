@@ -1,0 +1,21 @@
+class Solution {
+    static int evenlyDivides(int n) {
+        // code here
+        
+        
+        if (n == 0){
+            return 0;
+        }
+        int temp = n;
+        int count = 0;
+        int result ;
+        while(temp != 0){
+            result = temp % 10;
+            temp = temp / 10;
+            if (result != 0 && n % result == 0 ){
+                count++;
+            }
+        }
+        return count;
+    }
+}
