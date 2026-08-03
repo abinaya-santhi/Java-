@@ -1,0 +1,20 @@
+class Solution {
+    static boolean armstrongNumber(int n) {
+        // code here
+        boolean number = false;
+        int temp = n;
+        int rev = 0;
+        int sum = 0;
+        while (temp != 0){
+            int digit = temp % 10;
+            sum = sum + (int) Math.pow(digit,3);
+            temp = temp /10;
+        }
+        if (n == sum){
+            number = true;
+        }
+        
+        return number;
+        
+    }
+}
